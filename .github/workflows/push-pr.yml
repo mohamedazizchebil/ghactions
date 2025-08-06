@@ -1,0 +1,22 @@
+on:
+    push:
+      branches:
+        - master
+        - "realese/**"
+      paths:
+        - "src/**"
+    
+    pull-request:
+      branches:
+        - master
+        - "realese/**"
+
+jobs:
+      test:
+        runs-on: ubuntu-latest
+        steps:
+          - name: checkout
+            uses: actions/checkout@v4.2.2
+          
+          - name: Run tests
+            run: npm test
