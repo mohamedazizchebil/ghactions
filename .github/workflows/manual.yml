@@ -2,7 +2,7 @@ on:
     workflow_dispatch:
 jobs:
   deploy:
-      runs_on: ubuntu-latest
+      runs-on: ubuntu-latest
       steps:
         - name: deploy
           run: echo "deploying the application"
